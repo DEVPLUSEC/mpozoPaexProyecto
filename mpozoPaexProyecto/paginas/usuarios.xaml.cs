@@ -38,7 +38,8 @@ namespace mpozoPaexProyecto.paginas
 
         private void listaUsuarios_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-
+            var obj = (Usuario)e.SelectedItem;
+            Navigation.PushAsync(new eventos.actualizar_eliminar_usuario(obj));
         }
     }
 }

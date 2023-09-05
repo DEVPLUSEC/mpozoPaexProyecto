@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mpozoPaexProyecto.eventos.actualizar_eliminar_usuario"
+             BackgroundColor="#1a3069"
+             Title="Actualizar/Eliminar usuario">
+    <ContentPage.Content>
+        <StackLayout Margin="25">
+            <!-- ==== Casilla de nombres ==== -->
+            <Label Grid.Row="2" Text="Nombres" TextColor="White" FontSize="15" />
+            <Frame x:Name="fraNombres" Grid.Row="3" CornerRadius="15"  Padding="0" HasShadow="False">
+                <StackLayout>
+                    <Entry x:Name="txtNombres" TextTransform="Lowercase"  TextColor="Black" Placeholder="Miguel Angel"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- ==== Casilla de apellidos ==== -->
+            <Label Grid.Row="2" Text="Apellidos" TextColor="White" FontSize="15" />
+            <Frame x:Name="fraApellidos" Grid.Row="3" CornerRadius="15"  Padding="0" HasShadow="False">
+                <StackLayout>
+                    <Entry x:Name="txtApellidos" TextTransform="Lowercase"  TextColor="Black" Placeholder="Pozo Jacome"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- ==== Casilla de edad ==== -->
+            <Label Grid.Row="2" Text="Edad" TextColor="White" FontSize="15" />
+            <Frame x:Name="fraEdad" Grid.Row="3" CornerRadius="15"  Padding="0" HasShadow="False">
+                <StackLayout>
+                    <Entry x:Name="txtEdad" TextTransform="Lowercase" Keyboard="Numeric" MaxLength="2" TextColor="Black" Placeholder="26"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- ==== Casilla de Correo ==== -->
+            <Label Grid.Row="2" Text="Correo electronico" TextColor="White" FontSize="15" />
+            <Frame x:Name="fraCorreo" Grid.Row="3" CornerRadius="15"  Padding="0" HasShadow="False">
+                <StackLayout>
+                    <Entry x:Name="txtCorreo" TextTransform="Lowercase" Keyboard="Email" TextColor="Black" Placeholder="angelmiguel358@gmail.com"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- ==== Casilla de Contrasena ==== -->
+            <Label Grid.Row="2" Text="Contraseña" TextColor="White" FontSize="15" />
+            <Frame x:Name="fraContrasena" Grid.Row="3" CornerRadius="15"  Padding="0" HasShadow="False">
+                <StackLayout>
+                    <Entry x:Name="txtContrasena" TextTransform="Lowercase" IsPassword="True" TextColor="Black" Placeholder="*****************"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- ==== Casilla de Boton de actualizar ==== -->
+            <Button x:Name="btnActualizar" Clicked="btnActualizar_Clicked" Grid.Row="9" BackgroundColor="#3DD538" Text="Actualizar" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand"/>
+
+            <!-- ==== Casilla de Boton de eliminar ==== -->
+            <Button x:Name="btnEliminar" Clicked="btnEliminar_Clicked" Grid.Row="10" BackgroundColor="#E02901" Text="Eliminar" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

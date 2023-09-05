@@ -6,6 +6,14 @@
              IconImageSource="usuarios">
     <ContentPage.Content>
         <StackLayout>
+
+            <Frame CornerRadius="15"  Padding="15" HasShadow="False" HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Label FontSize="25" Text="Lista de usuarios SQLite" TextColor="Black"/>
+                </StackLayout>
+            </Frame>
+            
+
             <ListView x:Name="listaUsuarios" ItemSelected="listaUsuarios_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>

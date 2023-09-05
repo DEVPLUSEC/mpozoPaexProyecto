@@ -34,28 +34,25 @@ namespace mpozoPaexProyecto.paginas
         }
 
         // funcion sql
-        public static IEnumerable<Usuario> select_where(SQLiteConnection db, string correo)
-        {
-            return db.Query<Usuario>("SELECT * FROM Usuario where Correo=? ", correo);
+        
 
-        }
-
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
 
             var valor = Preferences.Get("correo", "default_value");
-            txtCorreo.Text = "Bienvenido " + valor; // show value for Label in second page
 
-            var ruta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "mpozo.db");
-            var db = new SQLiteConnection(ruta);
-
-            db.CreateTable<Usuario>();
-
-            IEnumerable<Usuario> resultado = select_where(db, valor);
             
 
-            Console.WriteLine("Resultado", resultado);
+            var result = await con.Table<Usuario>().FirstAsync(u => u.Correo == valor);
+
+            if (result != null)
+            {
+                txtNombres.Text = "Bienvenido " + result.Nombres.ToString() + " " + result.Apellidos.ToString();
+                txtCorreo.Text = "Tu correo es: " + result.Correo.ToString();
+            }
+
+            
 
         }
     }

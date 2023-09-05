@@ -7,11 +7,23 @@
     <ContentPage.Content>
         <StackLayout>
 
-           
+            <Frame CornerRadius="15"  Padding="15" HasShadow="False" HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Label FontSize="25" Text="Informacion General" TextColor="Black"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame Margin="25">
+                <Label x:Name="txtNombres"></Label>
+            </Frame>
+            <Frame Margin="25">
+                <Label x:Name="txtCorreo"></Label>
+            </Frame>
             
-            <Label x:Name="txtCorreo" Text=""
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            
+
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

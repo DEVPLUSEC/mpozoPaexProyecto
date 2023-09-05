@@ -3,8 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:Local="clr-namespace:mpozoPaexProyecto.paginas"
              x:Class="mpozoPaexProyecto.paginas.principal"
+            Shell.NavBarIsVisible="False"
+            NavigationPage.HasNavigationBar="False"
             
-            SelectedTabColor="#584df2"
+            SelectedTabColor="green"
             UnselectedTabColor="gray">
   <!--Pages can be added as references or inline-->
     <Local:inicio x:Name="tabInicio" />
