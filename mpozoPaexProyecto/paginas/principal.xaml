@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:Local="clr-namespace:mpozoPaexProyecto.paginas"
+             x:Class="mpozoPaexProyecto.paginas.principal"
+            
+            SelectedTabColor="#584df2"
+            UnselectedTabColor="gray">
+  <!--Pages can be added as references or inline-->
+    <Local:inicio x:Name="tabInicio" />
+    <Local:usuarios x:Name="tabUsuarios"/>
+    <Local:clientes x:Name="tabClientes"/>
+</TabbedPage>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mpozoPaexProyecto.paginas.inicio_sesion"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#1a3069">
+    <ContentPage.Content>
+        <!-- ==== Grilla de login ==== -->
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" RowSpacing="15" VerticalOptions="CenterAndExpand" Padding="30,0">
+
+            <!-- ==== Logo de aplicacion ==== -->
+            <Image Grid.Row="0" Source="https://lh3.googleusercontent.com/q9awQWk_vFnksalnDqq7BFhJKS7lpKwIejrsyYaT5vnBzU1fehe0ca8AqPw6v6WL-IPaPnyZltEVqze1aiB_=w974" HeightRequest="250" WidthRequest="250" Aspect="AspectFit"/>
+
+            <!-- ==== Span de validacion de datos API ==== -->
+            <Label x:Name="dataSpa" Grid.Row="1" FontSize="15" IsVisible="false" HorizontalTextAlignment="Center"/>
+
+            <!-- ==== Casilla de correo ==== -->
+            <Label Grid.Row="2" Text="Correo electrónico" TextColor="White" FontSize="15" />
+            <Frame x:Name="emailFra" Grid.Row="3" CornerRadius="15"  Padding="0" HasShadow="False">
+                <StackLayout>
+                    <Entry x:Name="txtEmail" TextTransform="Lowercase" Keyboard="Email" Text="devplusec@gmail.com" TextColor="Black" Placeholder="email@example.com"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- ==== Casilla de contraseña ==== -->
+            <Label Grid.Row="5" Text="Contraseña" TextColor="White" FontSize="15" />
+            <Frame x:Name="passFra" Grid.Row="6" CornerRadius="15"  Padding="0" HasShadow="False">
+                <StackLayout>
+                    <Entry x:Name="txtContrasena" IsPassword="True" Keyboard="Text" Text="12345" TextColor="Black" Placeholder="***********"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- ==== Casilla de Boton de inicio de sesion ==== -->
+            <Button x:Name="btnInicio" Clicked="btnIniciar_Clicked" Grid.Row="9" BackgroundColor="#fd684d" Text="Iniciar sesión" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand"/>
+
+            <!-- ==== Casilla de Boton de registro ==== -->
+            <Button x:Name="btnRegistro" Clicked="btnRegistro_Clicked" Grid.Row="10" BackgroundColor="#3DD538" Text="Registrar" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand"/>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
