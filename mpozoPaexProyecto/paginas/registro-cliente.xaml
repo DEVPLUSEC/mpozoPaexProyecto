@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mpozoPaexProyecto.paginas.registro_cliente"
+             BackgroundColor="#1a3069"
+             Title="Registro de cliente"
+             >
+    <ContentPage.Content>
+        <StackLayout Margin="25">
+            <!-- ==== Casilla de Nombre ==== -->
+            <Label Grid.Row="2" Text="Nombre" TextColor="White" FontSize="15" />
+            <Frame x:Name="fraNombres" Grid.Row="3" CornerRadius="15"  Padding="0" HasShadow="False">
+                <StackLayout>
+                    <Entry x:Name="txtNombre" TextTransform="Lowercase"  TextColor="Black" Placeholder="Escribir cliente..."/>
+                </StackLayout>
+            </Frame>
+
+            <!-- ==== Casilla de industria ==== -->
+            <Label Grid.Row="2" Text="Industria" TextColor="White" FontSize="15" />
+            <Frame x:Name="fraIndustria" Grid.Row="3" CornerRadius="15"  Padding="0" HasShadow="False">
+                <StackLayout>
+                    <Entry x:Name="txtIndustria" TextTransform="Lowercase"  TextColor="Black" Placeholder="Escribir industria..."/>
+                </StackLayout>
+            </Frame>
+
+            
+          
+
+            <!-- ==== Casilla de Boton de REGISTRAR ==== -->
+            <Button x:Name="btnRegistrar" Clicked="btnRegistrar_Clicked" Grid.Row="9" BackgroundColor="#fd684d" Text="Registrar cliente" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

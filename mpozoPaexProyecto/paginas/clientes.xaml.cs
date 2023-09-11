@@ -17,13 +17,14 @@ using mpozoPaexProyecto.interfaces;
 using mpozoPaexProyecto.modelos;
 using System.IO;
 using System.Collections.ObjectModel;
+using static SQLite.SQLite3;
 
 namespace mpozoPaexProyecto.paginas
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class clientes : ContentPage
     {
-        private const string Url = "http://10.2.2.1/paex/post.php";
+        private const string Url = "http://10.2.1.15/paex/post.php";
         private readonly HttpClient cli = new HttpClient();
         private ObservableCollection<Cliente> list_cli;
         private SQLiteAsyncConnection con;
@@ -55,7 +56,7 @@ namespace mpozoPaexProyecto.paginas
 
         public async void mostrar(string usuario)
         {
-
+            id_usuario = usuario.ToString();
             Console.WriteLine(usuario);
             var content = await cli.GetStringAsync(Url + "?usuario=" + usuario);
             List<Cliente> get_clientes = JsonConvert.DeserializeObject<List<Cliente>>(content);
@@ -73,6 +74,11 @@ namespace mpozoPaexProyecto.paginas
             Navigation.PushAsync(new eventos.actualizar_eliminar_cliente(objeto));
         }
 
-        
+        private void btnRegistro_Clicked(object sender, EventArgs e)
+        {
+            Console.WriteLine(id_usuario);
+            Navigation.PushAsync(new paginas.registro_cliente(id_usuario));
+
+        }
     }
 }

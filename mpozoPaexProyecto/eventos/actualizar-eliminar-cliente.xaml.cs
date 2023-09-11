@@ -38,7 +38,7 @@ namespace mpozoPaexProyecto.eventos
                 parametros.Add("industria", txtIndustria.Text);
                 
 
-                cliente.UploadValues("http://10.2.2.1/paex/post.php?id=" + id_seleccion.ToString() + "&nombre=" + txtNombre.Text + "&industria=" + txtIndustria.Text, "PUT", parametros);
+                cliente.UploadValues("http://10.2.1.15/paex/post.php?id=" + id_seleccion.ToString() + "&nombre=" + txtNombre.Text + "&industria=" + txtIndustria.Text, "PUT", parametros);
 
                 Navigation.PushAsync(new paginas.principal());
 

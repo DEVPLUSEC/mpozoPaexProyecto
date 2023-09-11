@@ -22,6 +22,12 @@
             <Frame Margin="25">
                 <Label x:Name="txtId"></Label>
             </Frame>
+
+            <Frame>
+                <!-- ==== Casilla de Boton de REGISTRAR ==== -->
+                <Button x:Name="btnCerrarSesion" Clicked="btnCerrarSesion_Clicked" Grid.Row="9" BackgroundColor="#fd684d" Text="Cerrar sesion" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand"/>
+
+            </Frame>
             
             
 

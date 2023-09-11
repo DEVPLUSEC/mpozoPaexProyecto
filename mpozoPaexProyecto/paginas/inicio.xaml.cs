@@ -56,5 +56,11 @@ namespace mpozoPaexProyecto.paginas
             
 
         }
+
+        private void btnCerrarSesion_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new paginas.inicio_sesion());
+
+        }
     }
 }
