@@ -50,6 +50,7 @@ namespace mpozoPaexProyecto.paginas
             {
                 txtNombres.Text = "Bienvenido " + result.Nombres.ToString() + " " + result.Apellidos.ToString();
                 txtCorreo.Text = "Tu correo es: " + result.Correo.ToString();
+                txtId.Text = "Tu Id es: " + result.Id.ToString();
             }
 
             

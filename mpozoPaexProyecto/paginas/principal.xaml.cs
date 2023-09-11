@@ -15,14 +15,13 @@ namespace mpozoPaexProyecto.paginas
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class principal : Xamarin.Forms.TabbedPage
     {
-        public principal(string correo)
+        public principal()
         {
             InitializeComponent();
             On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
             On<Android>().SetIsSmoothScrollEnabled(true);
 
-            var inputText = correo; //get value from Entry
-            Preferences.Set("correo", inputText);
+            
 
         }
     }

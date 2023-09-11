@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mpozoPaexProyecto.eventos.actualizar_eliminar_cliente"
+             BackgroundColor="#1a3069"
+             Title="Actualizar/Eliminar cliente">
+    <ContentPage.Content>
+        <StackLayout Margin="25">
+            <!-- ==== Casilla de nombres ==== -->
+            <Label Grid.Row="2" Text="Nombres" TextColor="White" FontSize="15" />
+            <Frame x:Name="fraNombres" Grid.Row="3" CornerRadius="15"  Padding="0" HasShadow="False">
+                <StackLayout>
+                    <Entry x:Name="txtNombre" TextTransform="Lowercase"  TextColor="Black" Placeholder="Miguel Angel"/>
+                </StackLayout>
+            </Frame>
+
+            <!-- ==== Casilla de apellidos ==== -->
+            <Label Grid.Row="2" Text="Apellidos" TextColor="White" FontSize="15" />
+            <Frame x:Name="fraApellidos" Grid.Row="3" CornerRadius="15"  Padding="0" HasShadow="False">
+                <StackLayout>
+                    <Entry x:Name="txtIndustria" TextTransform="Lowercase"  TextColor="Black" Placeholder="Pozo Jacome"/>
+                </StackLayout>
+            </Frame>
+
+
+
+            <!-- ==== Casilla de Boton de actualizar ==== -->
+            <Button x:Name="btnActualizar" Clicked="btnActualizar_Clicked" Grid.Row="9" BackgroundColor="#3DD538" Text="Actualizar" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand"/>
+
+            <!-- ==== Casilla de Boton de eliminar ==== -->
+            <Button x:Name="btnEliminar" Clicked="btnEliminar_Clicked" Grid.Row="10" BackgroundColor="#E02901" Text="Eliminar" TextColor="White" CornerRadius="20" FontSize="15" FontAttributes="Bold" HorizontalOptions="FillAndExpand"/>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -19,6 +19,9 @@
             <Frame Margin="25">
                 <Label x:Name="txtCorreo"></Label>
             </Frame>
+            <Frame Margin="25">
+                <Label x:Name="txtId"></Label>
+            </Frame>
             
             
 

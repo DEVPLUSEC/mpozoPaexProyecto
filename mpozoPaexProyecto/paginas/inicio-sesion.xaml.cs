@@ -12,6 +12,7 @@ using SQLite;
 using mpozoPaexProyecto.interfaces;
 using mpozoPaexProyecto.modelos;
 using System.IO;
+using Xamarin.Essentials;
 
 namespace mpozoPaexProyecto.paginas
 {
@@ -47,7 +48,10 @@ namespace mpozoPaexProyecto.paginas
 
                 if (resultado.Count() > 0)
                 {
-                    Navigation.PushAsync(new paginas.principal(txtEmail.Text));
+                    var inputText = txtEmail.Text; //get value from Entry
+                    Preferences.Set("correo", inputText);
+                    Navigation.PushAsync(new paginas.principal());
+
 
                 }
                 else
